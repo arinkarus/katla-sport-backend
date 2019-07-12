@@ -18,6 +18,11 @@ namespace KatlaSport.Services.ProductManagement
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or sets a count of products in a product category.
+        /// </summary>
+        public int ProductCount { get; set; }
+
+        /// <summary>
         /// Gets or sets a product category code.
         /// </summary>
         public string Code { get; set; }
