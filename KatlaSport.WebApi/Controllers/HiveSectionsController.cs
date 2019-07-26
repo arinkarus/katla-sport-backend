@@ -64,7 +64,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.Conflict)]
         [SwaggerResponse(HttpStatusCode.NotFound)]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
-        public async Task<IHttpActionResult> DeleteProduct([FromUri] int id)
+        public async Task<IHttpActionResult> DeleteHiveSection([FromUri] int id)
         {
             await _hiveSectionService.DeleteHiveSectionAsync(id);
             return ResponseMessage(Request.CreateResponse(HttpStatusCode.NoContent));
@@ -77,7 +77,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.BadRequest)]
         [SwaggerResponse(HttpStatusCode.Conflict)]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
-        public async Task<IHttpActionResult> AddHive([FromBody]UpdateHiveSectionRequest updateHiveSectionRequest)
+        public async Task<IHttpActionResult> AddHiveSection([FromBody]UpdateHiveSectionRequest updateHiveSectionRequest)
         {
             if (!ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.Conflict)]
         [SwaggerResponse(HttpStatusCode.NotFound)]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
-        public async Task<IHttpActionResult> UpdateHive([FromUri] int id, [FromBody] UpdateHiveSectionRequest updateHiveSectionRequest)
+        public async Task<IHttpActionResult> UpdateHiveSection([FromUri] int id, [FromBody] UpdateHiveSectionRequest updateHiveSectionRequest)
         {
             if (!ModelState.IsValid)
             {
