@@ -60,6 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwardManagement\Award.cs" />
+    <Compile Include="AwardManagement\AwardListItem.cs" />
+    <Compile Include="AwardManagement\IAwardService.cs" />
+    <Compile Include="AwardManagement\UpdateAwardRequest.cs" />
+    <Compile Include="AwardManagement\UpdateAwardRequestValidator.cs" />
     <Compile Include="HiveManagement\Hive.cs" />
     <Compile Include="HiveManagement\HiveListItem.cs" />
     <Compile Include="HiveManagement\HiveSection.cs" />

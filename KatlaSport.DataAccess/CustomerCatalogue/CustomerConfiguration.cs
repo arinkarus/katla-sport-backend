@@ -10,7 +10,7 @@ namespace KatlaSport.DataAccess.CustomerCatalogue
             HasKey(i => i.Id);
             Property(i => i.Id).HasColumnName("customer_id");
             Property(i => i.Name).HasColumnName("customer_name");
-            Property(i => i.Address).HasColumnName("customer_address");
+            Property(i => i.Address).HasColumnName("customer_description");
             Property(i => i.Phone).HasColumnName("customer_phone");
         }
     }
