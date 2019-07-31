@@ -1,4 +1,7 @@
-﻿namespace KatlaSport.DataAccess.EmployeeAward
+﻿using KatlaSport.DataAccess.FirmEmployee;
+using System.Collections.Generic;
+
+namespace KatlaSport.DataAccess.EmployeeAward
 {
     public class Award
     {
@@ -21,5 +24,7 @@
         /// Gets or sets a value indicating whether value is soft deleted.
         /// </summary>
         public bool IsDeleted { get; set; }
+
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

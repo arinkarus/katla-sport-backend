@@ -19,5 +19,10 @@
         /// Gets or sets an award description.
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Gets or sets employee count for award.
+        /// </summary>
+        public int EmployeeCount { get; set; }
     }
 }

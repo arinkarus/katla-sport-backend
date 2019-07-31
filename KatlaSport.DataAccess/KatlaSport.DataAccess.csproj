@@ -73,14 +73,22 @@
     <Compile Include="EmployeeAward\AwardConfiguration.cs" />
     <Compile Include="EmployeeAward\AwardContext.cs" />
     <Compile Include="EmployeeAward\IAwardContext.cs" />
+    <Compile Include="FirmEmployee\Employee.cs" />
     <Compile Include="EntitySet.cs" />
     <Compile Include="EntitySetBase.cs" />
+    <Compile Include="FirmEmployee\EmployeeConfiguration.cs" />
+    <Compile Include="FirmEmployee\EmployeeContext.cs" />
+    <Compile Include="FirmEmployee\IEmployeeContext.cs" />
     <Compile Include="IAsyncEntityStorage.cs" />
     <Compile Include="IDatabaseLogger.cs" />
     <Compile Include="IEntitySet.cs" />
     <Compile Include="Migrations\201907291831561_Added-award.cs" />
     <Compile Include="Migrations\201907291831561_Added-award.Designer.cs">
       <DependentUpon>201907291831561_Added-award.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907311623257_EmployeeAdded.cs" />
+    <Compile Include="Migrations\201907311623257_EmployeeAdded.Designer.cs">
+      <DependentUpon>201907311623257_EmployeeAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCatalogue\CatalogueProduct.cs" />
     <Compile Include="ProductCatalogue\CatalogueProductConfiguration.cs" />
@@ -135,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907291831561_Added-award.resx">
       <DependentUpon>201907291831561_Added-award.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907311623257_EmployeeAdded.resx">
+      <DependentUpon>201907311623257_EmployeeAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

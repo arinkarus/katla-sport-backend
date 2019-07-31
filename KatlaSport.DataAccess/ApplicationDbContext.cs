@@ -2,6 +2,7 @@
 using System.Reflection;
 using KatlaSport.DataAccess.CustomerCatalogue;
 using KatlaSport.DataAccess.EmployeeAward;
+using KatlaSport.DataAccess.FirmEmployee;
 using KatlaSport.DataAccess.Migrations;
 using KatlaSport.DataAccess.ProductCatalogue;
 using KatlaSport.DataAccess.ProductStore;
@@ -74,6 +75,11 @@ namespace KatlaSport.DataAccess
         /// Gets or sets a <see cref="DbSet"/> for <see cref="Award"/>.
         /// </summary>
         public DbSet<Award> Awards { get; set; }
+
+        /// <summary>
+        /// Gets or sets a <see cref="DbSet"/> for <see cref="Employee"/>.
+        /// </summary>
+        public DbSet<Employee> Employees { get; set; }
 
         /// <summary>
         /// Overrides base method.

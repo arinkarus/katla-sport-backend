@@ -24,6 +24,10 @@
         /// Gets or sets a value indicating whether value is soft deleted.
         /// </summary>
         public bool IsDeleted { get; set; }
+
+        /// <summary>
+        /// Gets or sets employee count for award.
+        /// </summary>
+        public int EmployeeCount { get; set; }
     }
 }
-

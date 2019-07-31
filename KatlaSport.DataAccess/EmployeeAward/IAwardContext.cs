@@ -1,7 +1,7 @@
 ﻿namespace KatlaSport.DataAccess.EmployeeAward
 {
     /// <summary>
-    /// Represents a context for customer domain.
+    /// Represents a context for award domain.
     /// </summary>
     public interface IAwardContext : IAsyncEntityStorage
     {
