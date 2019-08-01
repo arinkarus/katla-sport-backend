@@ -15,6 +15,6 @@ namespace KatlaSport.DataAccess.FirmEmployee
 
         public string About { get; set; }
 
-        public virtual ICollection<Award> Awards { get; set; }
+        public virtual ICollection<AwardEmployee> AwardsForEmployees { get; set; }
     }
 }

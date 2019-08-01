@@ -72,6 +72,8 @@
     <Compile Include="EmployeeAward\Award.cs" />
     <Compile Include="EmployeeAward\AwardConfiguration.cs" />
     <Compile Include="EmployeeAward\AwardContext.cs" />
+    <Compile Include="EmployeeAward\AwardEmployee.cs" />
+    <Compile Include="EmployeeAward\AwardEmployeeConfiguration.cs" />
     <Compile Include="EmployeeAward\IAwardContext.cs" />
     <Compile Include="FirmEmployee\Employee.cs" />
     <Compile Include="EntitySet.cs" />
@@ -89,6 +91,10 @@
     <Compile Include="Migrations\201907311623257_EmployeeAdded.cs" />
     <Compile Include="Migrations\201907311623257_EmployeeAdded.Designer.cs">
       <DependentUpon>201907311623257_EmployeeAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908010119415_ChangedAwardEmployee.cs" />
+    <Compile Include="Migrations\201908010119415_ChangedAwardEmployee.Designer.cs">
+      <DependentUpon>201908010119415_ChangedAwardEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCatalogue\CatalogueProduct.cs" />
     <Compile Include="ProductCatalogue\CatalogueProductConfiguration.cs" />
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311623257_EmployeeAdded.resx">
       <DependentUpon>201907311623257_EmployeeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908010119415_ChangedAwardEmployee.resx">
+      <DependentUpon>201908010119415_ChangedAwardEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

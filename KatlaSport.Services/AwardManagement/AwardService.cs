@@ -28,7 +28,7 @@ namespace KatlaSport.Services.AwardManagement
         /// <inheritdoc/>
         public async Task<List<AwardListItem>> GetAwardsAsync()
         {
-            var dbAwards = await _context.Awards.OrderBy(a => a.Id).ToArrayAsync();
+            var dbAwards = await _context.Awards.Where(a => !a.IsDeleted).OrderBy(a => a.Id).ToArrayAsync();
             var awards = dbAwards.Select(a => Mapper.Map<AwardListItem>(a)).ToList();
             return awards;
         }
@@ -80,9 +80,20 @@ namespace KatlaSport.Services.AwardManagement
             }
 
             var dbAward = dbAwards[0];
-            //todo: check that employees don't have this award
-            _context.Awards.Remove(dbAward);
-            await _context.SaveChangesAsync();
+            var countOfEmployees = await _context.AwardEmployees.Where(a => a.AwardId == awardId).CountAsync();
+            if (!(countOfEmployees == 0))
+            {
+                if (!dbAward.IsDeleted)
+                {
+                    dbAward.IsDeleted = true;
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                _context.Awards.Remove(dbAward);
+                await _context.SaveChangesAsync();
+            }
         }
 
         /// <inheritdoc/>

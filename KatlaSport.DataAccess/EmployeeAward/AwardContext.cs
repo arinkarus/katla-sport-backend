@@ -8,5 +8,7 @@
         }
 
         public IEntitySet<Award> Awards => GetDbSet<Award>();
+
+        public IEntitySet<AwardEmployee> AwardEmployees => GetDbSet<AwardEmployee>();
     }
 }

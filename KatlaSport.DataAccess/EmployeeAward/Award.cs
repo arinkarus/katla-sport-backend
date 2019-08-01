@@ -1,5 +1,4 @@
-﻿using KatlaSport.DataAccess.FirmEmployee;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace KatlaSport.DataAccess.EmployeeAward
 {
@@ -25,6 +24,6 @@ namespace KatlaSport.DataAccess.EmployeeAward
         /// </summary>
         public bool IsDeleted { get; set; }
 
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<AwardEmployee> AwardsForEmployees { get; set; }
     }
 }
