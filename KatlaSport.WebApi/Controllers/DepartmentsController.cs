@@ -48,13 +48,13 @@ namespace KatlaSport.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("parents/{id:int:min(1)}")]
+        [Route("parents/{parentId:int:min(1)}")]
         [SwaggerResponse(HttpStatusCode.OK, Description = "Returns a list of child departments.",
          Type = typeof(DepartmentSelectItem[]))]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
-        public async Task<IHttpActionResult> GetParentDepartments(int id)
+        public async Task<IHttpActionResult> GetParentDepartments(int parentId)
         {
-            var departments = await _departmentService.GetChildDepartmentsAsync(id);
+            var departments = await _departmentService.GetChildDepartmentsAsync(parentId);
             return Ok(departments);
         }
 
