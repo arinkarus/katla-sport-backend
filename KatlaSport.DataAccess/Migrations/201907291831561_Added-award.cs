@@ -2,6 +2,9 @@ namespace KatlaSport.DataAccess.Migrations
 {
     using System.Data.Entity.Migrations;
 
+    /// <summary>
+    /// Migration for adding Award.
+    /// </summary>
     public partial class Addedaward : DbMigration
     {
         public override void Up()

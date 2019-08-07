@@ -12,6 +12,7 @@ namespace KatlaSport.DataAccess.FirmEmployee
             Property(i => i.Name).HasColumnName("employee_name");
             Property(i => i.Surname).HasColumnName("employee_surname");
             Property(i => i.About).HasColumnName("employee_about");
+            HasRequired(i => i.Department).WithMany().HasForeignKey(i => i.DepartmentId);
         }
     }
 }

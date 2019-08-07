@@ -2,6 +2,9 @@ namespace KatlaSport.DataAccess.Migrations
 {
     using System.Data.Entity.Migrations;
 
+    /// <summary>
+    /// Migration for adding employee.
+    /// </summary>
     public partial class EmployeeAdded : DbMigration
     {
         public override void Up()

@@ -9,6 +9,7 @@
         {
             CreateMap<DataAccessAward, Award>();
             CreateMap<DataAccessAward, AwardListItem>();
+            CreateMap<DataAccessAward, UpdateAwardRequest>();
             CreateMap<UpdateAwardRequest, DataAccessAward>();
         }
     }

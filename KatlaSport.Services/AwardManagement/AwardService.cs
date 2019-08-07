@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using KatlaSport.DataAccess;
 using KatlaSport.DataAccess.EmployeeAward;
+using KatlaSport.Services.Exceptions;
 using DbAward = KatlaSport.DataAccess.EmployeeAward.Award;
 
 namespace KatlaSport.Services.AwardManagement
@@ -36,13 +37,13 @@ namespace KatlaSport.Services.AwardManagement
         /// <inheritdoc/>
         public async Task<Award> GetAwardAsync(int awardId)
         {
-            var dbAward = await _context.Awards.Where(a => a.Id == awardId).ToArrayAsync();
-            if (dbAward.Length == 0)
+            var dbAwards = await _context.Awards.Where(a => a.Id == awardId).ToArrayAsync();
+            if (dbAwards.Length == 0)
             {
                 throw new RequestedResourceNotFoundException();
             }
 
-            return Mapper.Map<Award>(dbAward);
+            return Mapper.Map<Award>(dbAwards[0]);
         }
 
         /// <inheritdoc/>
@@ -65,7 +66,6 @@ namespace KatlaSport.Services.AwardManagement
 
             var dbAward = dbAwards[0];
             Mapper.Map(updateRequest, dbAward);
-
             await _context.SaveChangesAsync();
             return Mapper.Map<Award>(dbAward);
         }

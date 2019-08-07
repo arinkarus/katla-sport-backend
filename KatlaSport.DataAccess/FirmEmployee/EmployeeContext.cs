@@ -1,4 +1,6 @@
-﻿namespace KatlaSport.DataAccess.FirmEmployee
+﻿using KatlaSport.DataAccess.EmployeeDepartment;
+
+namespace KatlaSport.DataAccess.FirmEmployee
 {
     internal class EmployeeContext : DomainContextBase<ApplicationDbContext>, IEmployeeContext
     {
@@ -8,5 +10,7 @@
         }
 
         public IEntitySet<Employee> Employees => GetDbSet<Employee>();
+
+        public IEntitySet<Department> Departments => GetDbSet<Department>();
     }
 }

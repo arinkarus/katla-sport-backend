@@ -5,7 +5,6 @@ namespace KatlaSport.Services.AwardManagement
 {
     public interface IAwardService
     {
-
         /// <summary>
         /// Gets an award list.
         /// </summary>
@@ -16,7 +15,7 @@ namespace KatlaSport.Services.AwardManagement
         /// Gets an award with specified identifier.
         /// </summary>
         /// <param name="awardId">An award identifier.</param>
-        /// <returns>A <see cref="Task{Award}"/>.</returns>
+        /// <returns>A <see cref="Task{UpdateAwardRequest}"/>.</returns>
         Task<Award> GetAwardAsync(int awardId);
 
         /// <summary>

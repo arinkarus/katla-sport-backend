@@ -75,6 +75,10 @@
     <Compile Include="EmployeeAward\AwardEmployee.cs" />
     <Compile Include="EmployeeAward\AwardEmployeeConfiguration.cs" />
     <Compile Include="EmployeeAward\IAwardContext.cs" />
+    <Compile Include="EmployeeDepartment\Department.cs" />
+    <Compile Include="EmployeeDepartment\DepartmentConfiguration.cs" />
+    <Compile Include="EmployeeDepartment\DepartmentContext.cs" />
+    <Compile Include="EmployeeDepartment\IDepartmentContext.cs" />
     <Compile Include="FirmEmployee\Employee.cs" />
     <Compile Include="EntitySet.cs" />
     <Compile Include="EntitySetBase.cs" />
@@ -95,6 +99,26 @@
     <Compile Include="Migrations\201908010119415_ChangedAwardEmployee.cs" />
     <Compile Include="Migrations\201908010119415_ChangedAwardEmployee.Designer.cs">
       <DependentUpon>201908010119415_ChangedAwardEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041849192_AddedDepartment.cs" />
+    <Compile Include="Migrations\201908041849192_AddedDepartment.Designer.cs">
+      <DependentUpon>201908041849192_AddedDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041953392_AddedDepartmentIsDeleted.cs" />
+    <Compile Include="Migrations\201908041953392_AddedDepartmentIsDeleted.Designer.cs">
+      <DependentUpon>201908041953392_AddedDepartmentIsDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041959228_AddedDepartmentToEmployee.cs" />
+    <Compile Include="Migrations\201908041959228_AddedDepartmentToEmployee.Designer.cs">
+      <DependentUpon>201908041959228_AddedDepartmentToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908042351319_AddedDescriptionForDepartment.cs" />
+    <Compile Include="Migrations\201908042351319_AddedDescriptionForDepartment.Designer.cs">
+      <DependentUpon>201908042351319_AddedDescriptionForDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908060050112_AddedImagePathToEmployee.cs" />
+    <Compile Include="Migrations\201908060050112_AddedImagePathToEmployee.Designer.cs">
+      <DependentUpon>201908060050112_AddedImagePathToEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductCatalogue\CatalogueProduct.cs" />
     <Compile Include="ProductCatalogue\CatalogueProductConfiguration.cs" />
@@ -132,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
@@ -155,6 +180,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908010119415_ChangedAwardEmployee.resx">
       <DependentUpon>201908010119415_ChangedAwardEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041849192_AddedDepartment.resx">
+      <DependentUpon>201908041849192_AddedDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041953392_AddedDepartmentIsDeleted.resx">
+      <DependentUpon>201908041953392_AddedDepartmentIsDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041959228_AddedDepartmentToEmployee.resx">
+      <DependentUpon>201908041959228_AddedDepartmentToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908042351319_AddedDescriptionForDepartment.resx">
+      <DependentUpon>201908042351319_AddedDescriptionForDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908060050112_AddedImagePathToEmployee.resx">
+      <DependentUpon>201908060050112_AddedImagePathToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

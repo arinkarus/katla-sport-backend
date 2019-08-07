@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using KatlaSport.DataAccess;
 using KatlaSport.DataAccess.ProductCatalogue;
+using KatlaSport.Services.Exceptions;
 using DbProductCategory = KatlaSport.DataAccess.ProductCatalogue.ProductCategory;
 
 namespace KatlaSport.Services.ProductManagement

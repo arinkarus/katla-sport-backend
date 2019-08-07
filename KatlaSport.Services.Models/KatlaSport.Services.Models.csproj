@@ -65,6 +65,23 @@
     <Compile Include="AwardManagement\IAwardService.cs" />
     <Compile Include="AwardManagement\UpdateAwardRequest.cs" />
     <Compile Include="AwardManagement\UpdateAwardRequestValidator.cs" />
+    <Compile Include="DepartmentManagement\CreateDepartmentRequestValidator.cs" />
+    <Compile Include="DepartmentManagement\Department.cs" />
+    <Compile Include="DepartmentManagement\CreateDepartmentRequest.cs" />
+    <Compile Include="DepartmentManagement\DepartmentListItem.cs" />
+    <Compile Include="DepartmentManagement\IDepartmentService.cs" />
+    <Compile Include="DepartmentManagement\DepartmentSelectItem.cs" />
+    <Compile Include="DepartmentManagement\UpdateDepartmentData.cs" />
+    <Compile Include="DepartmentManagement\UpdateDepartmentRequest.cs" />
+    <Compile Include="DepartmentManagement\UpdateDepartmentRequestValidator.cs" />
+    <Compile Include="EmployeeManagement\Employee.cs" />
+    <Compile Include="EmployeeManagement\EmployeeListItem.cs" />
+    <Compile Include="EmployeeManagement\EmployeeProfile.cs" />
+    <Compile Include="EmployeeManagement\EmployeeUpdateData.cs" />
+    <Compile Include="EmployeeManagement\IEmployeeService.cs" />
+    <Compile Include="EmployeeManagement\UpdateEmployeeData.cs" />
+    <Compile Include="EmployeeManagement\UpdateEmployeeRequest.cs" />
+    <Compile Include="EmployeeManagement\UpdateEmployeeRequestValidator.cs" />
     <Compile Include="HiveManagement\Hive.cs" />
     <Compile Include="HiveManagement\HiveListItem.cs" />
     <Compile Include="HiveManagement\HiveSection.cs" />
@@ -75,6 +92,9 @@
     <Compile Include="HiveManagement\UpdateHiveRequestValidator.cs" />
     <Compile Include="HiveManagement\UpdateHiveSectionRequest.cs" />
     <Compile Include="HiveManagement\UpdateHiveSectionRequestValidator.cs" />
+    <Compile Include="ImageManagement\IImageService.cs" />
+    <Compile Include="ImageManagement\ImageData.cs" />
+    <Compile Include="ImageManagement\ImageResult.cs" />
     <Compile Include="ProductManagement\IProductCatalogueService.cs" />
     <Compile Include="ProductManagement\IProductCategoryService.cs" />
     <Compile Include="ProductManagement\Product.cs" />
@@ -95,5 +115,6 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

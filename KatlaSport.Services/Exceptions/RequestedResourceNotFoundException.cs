@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace KatlaSport.Services
+namespace KatlaSport.Services.Exceptions
 {
     [Serializable]
     public class RequestedResourceNotFoundException : Exception

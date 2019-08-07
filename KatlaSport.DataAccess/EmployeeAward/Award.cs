@@ -24,6 +24,9 @@ namespace KatlaSport.DataAccess.EmployeeAward
         /// </summary>
         public bool IsDeleted { get; set; }
 
+        /// <summary>
+        /// Gets or sets awards for employees.
+        /// </summary>
         public virtual ICollection<AwardEmployee> AwardsForEmployees { get; set; }
     }
 }

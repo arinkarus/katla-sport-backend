@@ -30,7 +30,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.OK, Description = "Returns a list of awards.",
             Type = typeof(AwardListItem[]))]
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
-        public async Task<IHttpActionResult> GetHives()
+        public async Task<IHttpActionResult> GetAwards()
         {
             var awards = await _awardService.GetAwardsAsync();
             return Ok(awards);
@@ -61,7 +61,7 @@ namespace KatlaSport.WebApi.Controllers
             }
 
             var createdAward = await _awardService.CreateAwardAsync(updateRequest);
-            var location = string.Format("/api/hives/{0}", createdAward.Id);
+            var location = string.Format("/api/awards/{0}", createdAward.Id);
             return Created<Award>(location, createdAward);
         }
 

@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using System.Configuration;
+using Autofac;
 
 namespace KatlaSport.Services
 {
@@ -18,6 +19,15 @@ namespace KatlaSport.Services
             builder.RegisterType<HiveManagement.HiveService>().As<HiveManagement.IHiveService>();
             builder.RegisterType<HiveManagement.HiveSectionService>().As<HiveManagement.IHiveSectionService>();
             builder.RegisterType<AwardManagement.AwardService>().As<AwardManagement.IAwardService>();
+            builder.RegisterType<DepartmentManagement.DepartmentService>().As<DepartmentManagement.IDepartmentService>();
+            builder.RegisterType<EmployeeManagement.EmployeeService>().As<EmployeeManagement.IEmployeeService>();
+            string storageAccountConnectionString = ConfigurationManager.AppSettings["storageAccountConnectionString"];
+            string blobContainerName = ConfigurationManager.AppSettings["blobContainerName"];
+            string storageAccountPath = ConfigurationManager.AppSettings["storageAccountPath"];
+            builder.RegisterType<ImageManagement.ImageService>().As<ImageManagement.IImageService>()
+                .WithParameter("storageAccountConnectionString", storageAccountConnectionString)
+                .WithParameter("blobContainerName", blobContainerName)
+                .WithParameter("storageAccountPath", storageAccountPath);
             builder.RegisterType<UserContext>().As<IUserContext>();
         }
     }

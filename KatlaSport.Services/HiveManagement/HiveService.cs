@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using KatlaSport.DataAccess;
 using KatlaSport.DataAccess.ProductStoreHive;
+using KatlaSport.Services.Exceptions;
 using DbHive = KatlaSport.DataAccess.ProductStoreHive.StoreHive;
 
 namespace KatlaSport.Services.HiveManagement
